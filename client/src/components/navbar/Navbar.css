@@ -1,0 +1,15 @@
+/* .navbar {
+    overflow: hidden;
+    
+    top: 0;
+    width: 100%;
+    margin-bottom: 20px;
+  } */
+
+  .spinner_div{
+    margin: auto;
+    width: 100%;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    text-align: center;
+}
