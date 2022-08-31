@@ -15,10 +15,11 @@ import {
     Text,
     
   } from '@chakra-ui/react';
-  import { PhoneIcon, AddIcon, WarningIcon, DeleteIcon, EditIcon } from '@chakra-ui/icons'
+  import { PhoneIcon, RepeatClockIcon,  CheckCircleIcon, TimeIcon, DeleteIcon, EditIcon } from '@chakra-ui/icons'
 
   // import Link from 'react-router-dom'
   import Navbar from '../navbar/Navbar'
+  import './Admin.css'
    import Chart from './BarChart/Chart'
 
   export default function AdminTemplate(){
@@ -35,7 +36,52 @@ import {
                 {/* for graph */}
                 <Box border={'2px solid transparent'} h={'20rem'} w={'50%'} backgroundColor={'whitesmoke'} mr={'2rem'}>
                   {/* <Chart/> */}
-                  <Chart/>
+                  <div>
+                    <Chart/>
+                  </div>
+                  <div>
+                    <h3>Stats</h3>
+                  </div>
+                  <div className="stats-container">
+                      <div>
+                        <div>
+                        
+                        <Button colorScheme='teal' variant='ghost'>
+                         <TimeIcon w={5} h={5} />
+                        </Button>
+                        </div>
+                        <div><h3>Pending Orders</h3></div>
+                        <div><h2>28</h2></div>
+                      </div>
+                      <div>
+                        <div>
+                        <Button colorScheme='teal' variant='ghost'>
+                         <PhoneIcon w={5} h={5} />
+                        </Button>
+                        </div>
+                        <div><h3>Shipping Orders</h3></div>
+                        <div><h2>48</h2></div>
+                      </div>
+                      <div>
+                         <div>
+                         <Button colorScheme='teal' variant='ghost'>
+                         <CheckCircleIcon w={5} h={5} />
+                        </Button>
+                         </div>
+                         <div><h3>Delivered Orders</h3></div>
+                        <div><h2>58</h2></div>
+                      </div>
+                      <div>
+                        <div>
+                        <Button colorScheme='teal' variant='ghost'>
+                         <RepeatClockIcon w={5} h={5} />
+                        </Button>
+                        </div>
+                        <div><h3>Returned Orders</h3></div>
+                        <div><h2>18</h2></div>
+                      </div>
+                  </div>
+                 
                 </Box>
 
                 {/*  */}
@@ -63,13 +109,16 @@ import {
                     {'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!'}
                     </chakra.p>
                     <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={14} ml={'11rem'}>
-                    <EditIcon w={5} h={5} m={6}/>
+                    <Button colorScheme='teal' variant='ghost'>
+                         <EditIcon w={5} h={5} />
+                    </Button>
                     <chakra.span
                         fontFamily={'Inter'}
                         fontWeight={'medium'}
                         color={'gray.500'}>
-                       
-                       <DeleteIcon w={5} h={5}/>
+                      <Button colorScheme='teal' variant='ghost'>
+                         <DeleteIcon w={5} h={5}/>
+                      </Button>
                     </chakra.span>
                     </chakra.p>
                 </Flex>
@@ -79,6 +128,11 @@ import {
                     width={'120px'}
                     alignSelf={'center'}
                     m={{ base: '0 0 35px 0', md: '0 0 0 50px' }}
+                    transform="scale(1.0)"
+                    transition="0.3s ease-in-out"
+                  _hover={{
+                    transform: 'scale(1.05)',
+            }}
                 />
     
                 </Flex>
@@ -110,13 +164,17 @@ import {
                     {'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!'}
                     </chakra.p>
                     <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={30} ml={'11rem'}>
-                    <EditIcon w={5} h={5} m={6}/>
+                    <Button colorScheme='teal' variant='ghost'>
+                         <EditIcon w={5} h={5} />
+                    </Button>
                     <chakra.span
                         fontFamily={'Inter'}
                         fontWeight={'medium'}
                         color={'gray.500'}>
                         {' '}
-                        <DeleteIcon w={5} h={5}/>
+                        <Button colorScheme='teal' variant='ghost'>
+                         <DeleteIcon w={5} h={5}/>
+                      </Button>
                     </chakra.span>
                     </chakra.p>
                 </Flex>
@@ -125,7 +183,12 @@ import {
                     height={'120px'}
                     width={'120px'}
                     alignSelf={'center'}
+                    transform="scale(1.0)"
                     m={{ base: '0 0 20px 0', md: '0 0 0 50px' }}
+                    transition="0.3s ease-in-out"
+                    _hover={{
+                      transform: 'scale(1.05)',
+                    }}
                 />
     
                 </Flex>
@@ -156,13 +219,17 @@ import {
                     {'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!'}
                     </chakra.p>
                     <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={20} ml={'11rem'}>
-                    <EditIcon w={5} h={5} m={6}/>
+                    <Button colorScheme='teal' variant='ghost'>
+                         <EditIcon w={5} h={5} />
+                    </Button>
                     <chakra.span
                         fontFamily={'Inter'}
                         fontWeight={'medium'}
                         color={'gray.500'}>
                         {' '}
-                        <DeleteIcon w={5} h={5}/>
+                        <Button colorScheme='teal' variant='ghost'>
+                         <DeleteIcon w={5} h={5}/>
+                      </Button>
                     </chakra.span>
                     </chakra.p>
                 </Flex>
@@ -171,7 +238,12 @@ import {
                     height={'120px'}
                     width={'120px'}
                     alignSelf={'center'}
+                    transform="scale(1.0)"
                     m={{ base: '0 0 20px 0', md: '0 0 0 50px' }}
+                    transition="0.3s ease-in-out"
+                    _hover={{
+                      transform: 'scale(1.05)',
+                    }}
                 />
     
                 </Flex>
@@ -224,7 +296,12 @@ import {
             height={250}
             width={400}
             objectFit={'cover'}
+            transform="scale(1.0)"
             src={'https://acorn-react-classic-dashboard.coloredstrategies.com/img/product/small/product-10.webp'}
+            transition="0.3s ease-in-out"
+            _hover={{
+              transform: 'scale(1.05)',
+            }}
           />
         </Box>
         <Stack pt={10} align={'center'}>
@@ -281,7 +358,12 @@ import {
             height={250}
             width={400}
             objectFit={'cover'}
+            transform="scale(1.0)"
             src={'https://www.maggi.co.uk/sites/default/files/styles/maggi_desktop_image_style/public/NUK1265%20maggi%20Recipes%20banner%201500x700px%20opt2A.jpg?h=4f5b30f1&itok=DcsF1RwA'}
+            transition="0.3s ease-in-out"
+            _hover={{
+              transform: 'scale(1.05)',
+            }}
           />
         </Box>
         <Stack pt={10} align={'center'}>
@@ -337,7 +419,12 @@ import {
             height={250}
             width={400}
             objectFit={'cover'}
+            transform="scale(1.0)"
             src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9mHKFACMcEWLAHaaZKBhtqUek_RQvzp6L9w&usqp=CAU'}
+            transition="0.3s ease-in-out"
+                  _hover={{
+                    transform: 'scale(1.05)',
+                  }}
           />
         </Box>
         <Stack pt={10} align={'center'}>

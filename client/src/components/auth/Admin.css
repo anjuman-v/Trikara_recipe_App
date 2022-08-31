@@ -1,0 +1,21 @@
+.stats-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.stats-container > div {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stats-container > div > div{
+    padding: 2px;
+    
+}
+.stats-container > div >  div:nth-child(3) {
+    color: rgb(64, 145, 145);
+}

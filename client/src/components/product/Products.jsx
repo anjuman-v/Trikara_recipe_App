@@ -44,7 +44,7 @@ function Products() {
       <Navbar />
       <div className='spinner_div'>
       <Box>
-      <CircularProgress value={30} color='black' thickness='12px' />
+      <CircularProgress isIndeterminate color='#2a323d' />
       </Box>
       </div>
       </>

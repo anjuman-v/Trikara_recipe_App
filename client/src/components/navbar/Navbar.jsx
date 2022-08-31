@@ -138,7 +138,7 @@ import {
         </Flex>
   
         <Collapse in={isOpen} animateOpacity>
-          
+            
         </Collapse>
       </Box>
     );
