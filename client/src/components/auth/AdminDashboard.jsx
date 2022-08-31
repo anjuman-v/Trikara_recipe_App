@@ -13,24 +13,33 @@ import {
     Link,
     Stack,
     Text,
-   
+    
   } from '@chakra-ui/react';
+  import { PhoneIcon, AddIcon, WarningIcon, DeleteIcon, EditIcon } from '@chakra-ui/icons'
+
+  // import Link from 'react-router-dom'
   import Navbar from '../navbar/Navbar'
+   import Chart from './BarChart/Chart'
 
   export default function AdminTemplate(){
 
     return(
         <>
         <Navbar />
+        <Flex w={'70rem'} justifyContent={'space-between'} ml={'3rem'} mb={'1rem'} mr={'2rem'} mt={1.5}>
+            <Box><a href="/"><Text fontSize='4xl'>Home</Text></a></Box>
+            <Box> <a href="/addproducts"><Button colorScheme='teal' variant='solid'>Add to More Products</Button></a></Box>
+        </Flex>
         <Box mt={'1vh'} ml={'2rem'} mr={'2rem'} p={'0'}>
             <Flex>
                 {/* for graph */}
-                <Box border={'2px solid green'} h={'20rem'} w={'50%'} backgroundColor={'cyan.100'} mr={'2rem'}>
-
+                <Box border={'2px solid transparent'} h={'20rem'} w={'50%'} backgroundColor={'whitesmoke'} mr={'2rem'}>
+                  {/* <Chart/> */}
+                  <Chart/>
                 </Box>
 
                 {/*  */}
-                <Box border={'2px solid black'} h={'auto'} w={'50%'}>
+                <Box border={'2px solid transparent'} h={'auto'} w={'50%'}>
                 <Flex
                 mb={'3rem'}
                 boxShadow={'lg'}
@@ -53,14 +62,14 @@ import {
                     pb={4}>
                     {'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!'}
                     </chakra.p>
-                    <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={14}>
-                    {'Zoya Motki'}
+                    <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={14} ml={'11rem'}>
+                    <EditIcon w={5} h={5} m={6}/>
                     <chakra.span
                         fontFamily={'Inter'}
                         fontWeight={'medium'}
                         color={'gray.500'}>
-                        {' '}
-                        - {'pagl'}
+                       
+                       <DeleteIcon w={5} h={5}/>
                     </chakra.span>
                     </chakra.p>
                 </Flex>
@@ -100,14 +109,14 @@ import {
                     pb={4}>
                     {'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!'}
                     </chakra.p>
-                    <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={14}>
-                    {'Zoya Motki'}
+                    <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={30} ml={'11rem'}>
+                    <EditIcon w={5} h={5} m={6}/>
                     <chakra.span
                         fontFamily={'Inter'}
                         fontWeight={'medium'}
                         color={'gray.500'}>
                         {' '}
-                        - {'pagl'}
+                        <DeleteIcon w={5} h={5}/>
                     </chakra.span>
                     </chakra.p>
                 </Flex>
@@ -146,14 +155,14 @@ import {
                     pb={4}>
                     {'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!'}
                     </chakra.p>
-                    <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={14}>
-                    {'Zoya Motki'}
+                    <chakra.p fontFamily={'Work Sans'} fontWeight={'bold'} fontSize={20} ml={'11rem'}>
+                    <EditIcon w={5} h={5} m={6}/>
                     <chakra.span
                         fontFamily={'Inter'}
                         fontWeight={'medium'}
                         color={'gray.500'}>
                         {' '}
-                        - {'pagl'}
+                        <DeleteIcon w={5} h={5}/>
                     </chakra.span>
                     </chakra.p>
                 </Flex>
