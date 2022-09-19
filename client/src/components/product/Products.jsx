@@ -31,24 +31,25 @@ function Products() {
    
       useEffect(() =>{
         
-        dispatch(fetchData('https://trikararestapi.herokuapp.com/recipes'))
+        dispatch(fetchData('https://trikararecipeapi.herokuapp.com/recipes'))
     }, [])
     const handleDelete = (id) => {
-      let url = `https://trikararestapi.herokuapp.com/recipe/${id}`
+      let url = `https://trikararecipeapi.herokuapp.com/recipe/${id}`
       dispatch(deleteData(url))
   }
 
 
-    return loading ? (
-      <> 
-      <Navbar />
-      <div className='spinner_div'>
-      <Box>
-      <CircularProgress isIndeterminate color='#2a323d' />
-      </Box>
-      </div>
-      </>
-      ) : (
+    // return loading ? (
+    //   <> 
+    //   <Navbar />
+    //   <div className='spinner_div'>
+    //   <Box>
+    //   <CircularProgress isIndeterminate color='#2a323d' />
+    //   </Box>
+    //   </div>
+    //   </>
+    //   ) : 
+    return(
       <>
     <Navbar />
     <Box>
@@ -116,11 +117,18 @@ function Products() {
                         ₹199
                         </Text>
                       </Stack>
+                        <Flex gap={3}>
                         <Button 
                         bg={'black'}
                         color={'white'}
                         onClick={() => {handleDelete(el._id)}}
-                        >remove</Button>
+                        >Remove</Button>
+                        <Button 
+                        bg={'black'}
+                        color={'white'}
+                        
+                        > <Link to={`/recipe/${el._id}`}>Edit</Link></Button>
+                        </Flex>
                     </Stack>
                   </Box>
                 </Center>

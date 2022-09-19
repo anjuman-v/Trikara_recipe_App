@@ -5,6 +5,7 @@ import AdminTemplate from "../auth/AdminDashboard";
 import Login from "../auth/Login";
 import Signup from "../auth/Signup";
 import Footer from "../footer/Footer";
+import EditProduct from "../product/EditProduct";
 import Products from "../product/Products"
 
 
@@ -19,6 +20,7 @@ import Products from "../product/Products"
                 <Route path='/addproducts' element={<Admin/>}/>
                 <Route path='/signin' element={<Login/>} />
                 <Route path='/signup' element={<Signup />} />
+                <Route path="/recipe/:id" element={<EditProduct />}/>
             </Routes>
             <Footer />
             

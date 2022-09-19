@@ -44,7 +44,7 @@ export default function SignUp() {
     signUp(user)
     async function signUp(user) {
       
-      const res = await axios.post(`https://trikararestapi.herokuapp.com/signup`, user)
+      const res = await axios.post(`https://trikararecipeapi.herokuapp.com/signup`, user)
       const response = res.data;
       if(response.status === 'success') {
 
@@ -127,7 +127,7 @@ export default function SignUp() {
             </Stack>
             <Stack pt={6}>
               <Text align={'center'}>
-                Already a user? <Link color={'blue.400'}>Login</Link>
+                Already a user? <a href="/signin">Login</a>
               </Text>
             </Stack>
           </Stack>

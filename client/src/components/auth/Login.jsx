@@ -39,7 +39,7 @@ export default function Login() {
     signUp(user)
     async function signUp(user) {
       
-      const res = await axios.post(`https://trikararestapi.herokuapp.com/signin`, user)
+      const res = await axios.post(`https://trikararecipeapi.herokuapp.com/signin`, user)
       const response = res.data;
       if(response.status === 'success') {
         localStorage.setItem("token", JSON.stringify(res.data.token))
@@ -108,6 +108,9 @@ export default function Login() {
                 }}>
                 Sign out
               </Button>  : ""}
+              <Text align={'center'}>
+               Don't have an account ? <a href="/signup">Register</a>
+              </Text>
           </Stack>
         </Box>
       </Stack>
