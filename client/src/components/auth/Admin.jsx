@@ -29,7 +29,7 @@ export default function Admin() {
   const token1 = token ? JSON.parse(token) : navigate('/signin')
   console.log(token1)
 
-  const baseUrl = `https://trikararecipeapi.herokuapp.com/`;
+  const baseUrl = `https://trikara-recipes-ervices.onrender.com/`;
 
 
   const submitForm = async(el) => {
