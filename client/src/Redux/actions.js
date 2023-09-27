@@ -34,7 +34,7 @@ export const deleteData = (url) => async (dispatch) => {
         }
     })
     
-    const res = await fetch("https://trikararecipeapi.herokuapp.com/recipes", {
+    const res = await fetch("https://trikara-recipes-ervices.onrender.com/recipes", {
         method : "GET",
         headers : {
             Authorization : `Bearer ${token}`
