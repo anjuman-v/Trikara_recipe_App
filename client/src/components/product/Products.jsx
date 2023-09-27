@@ -31,10 +31,10 @@ function Products() {
    
       useEffect(() =>{
         
-        dispatch(fetchData('https://trikararecipeapi.herokuapp.com/recipes'))
+        dispatch(fetchData('https://trikara-recipes-ervices.onrender.com/recipes'))
     }, [])
     const handleDelete = (id) => {
-      let url = `https://trikararecipeapi.herokuapp.com/recipe/${id}`
+      let url = `https://trikara-recipes-ervices.onrender.com/recipe/${id}`
       dispatch(deleteData(url))
   }
 
