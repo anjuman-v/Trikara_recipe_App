@@ -37,7 +37,7 @@ import {
         
     }, [])
 
-    const baseUrl = `https://trikararecipeapi.herokuapp.com`;
+    const baseUrl = `https://trikara-recipes-ervices.onrender.com`;
 
 
     const getData = () => {
