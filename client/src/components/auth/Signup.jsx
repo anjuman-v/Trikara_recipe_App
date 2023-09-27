@@ -44,7 +44,7 @@ export default function SignUp() {
     signUp(user)
     async function signUp(user) {
       
-      const res = await axios.post(`https://trikararecipeapi.herokuapp.com/signup`, user)
+      const res = await axios.post(`https://trikara-recipes-ervices.onrender.com/signup`, user)
       const response = res.data;
       if(response.status === 'success') {
 
